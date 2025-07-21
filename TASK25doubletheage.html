@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!DOCTYPE html>
+<html>
+<body>
+
+<h2>Users Over 50 (After Doubling Age)</h2>
+<p id="output"></p>
+
+<script>
+  let users = [
+    { name: "nithish", age: 20 },
+    { name: "prakash", age: 30 },
+    { name: "akash", age: 35 }
+  ];
+
+  // Double the age and get names of users now over 50
+  let result = users
+    .map(user => ({ name: user.name, age: user.age * 2 }))
+    .filter(user => user.age > 50)
+    .map(user => user.name);
+
+  // Display the names
+  document.getElementById("output").innerHTML = result.join("<br>");
+</script>
+
+</body>
+</html>
+
+  
